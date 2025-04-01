@@ -1,0 +1,39 @@
+{
+  "name": "graphql-01",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Felipe Pinheiro",
+  "license": "MIT",
+  "dependencies": {
+    "apollo-server-express": "^3.13.0",
+    "bcryptjs": "^3.0.2",
+    "class-validator": "^0.14.1",
+    "express": "^4.21.2",
+    "graphql": "^16.10.0",
+    "pg": "^8.14.1",
+    "reflect-metadata": "^0.2.2",
+    "type-graphql": "^2.0.0-rc.2",
+    "typeorm": "^0.3.21",
+    "undici-types": "^6.20.0"
+  },
+  "scripts": {
+    "dev": "tsx watch src/server.ts",
+    "build": "tsup src/ --out-dir build",
+    "lint": "eslint src",
+    "lint:fix": "eslint src --fix"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.23.0",
+    "@tsconfig/node22": "^22.0.1",
+    "@types/node": "^22.13.17",
+    "eslint": "^9.23.0",
+    "eslint-config-prettier": "^10.1.1",
+    "eslint-plugin-prettier": "^5.2.5",
+    "globals": "^16.0.0",
+    "prettier": "^3.5.3",
+    "tsup": "^8.4.0",
+    "tsx": "^4.19.3",
+    "typescript": "^5.8.2",
+    "typescript-eslint": "^8.29.0"
+  }
+}
