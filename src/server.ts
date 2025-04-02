@@ -4,6 +4,7 @@ import { ApolloServer } from 'apollo-server-express'
 import { buildSchema } from 'type-graphql'
 import { UsersResolver } from './modules/users/graphql/resolvers/users-resolver'
 import { AppDataSource } from 'data-source'
+import { PetsResolver } from './modules/pets/graphql/resolvers/pets-resolver'
 
 async function init() {
   await AppDataSource.initialize()
@@ -11,7 +12,7 @@ async function init() {
   const port = 4010
 
   const schema = await buildSchema({
-    resolvers: [UsersResolver],
+    resolvers: [UsersResolver, PetsResolver],
   })
 
   const apolloServer = new ApolloServer({
